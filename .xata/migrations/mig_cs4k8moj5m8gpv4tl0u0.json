@@ -1,0 +1,26 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_cs4k8moj5m8gpv4tl0u0",
+    "operations": [
+      {
+        "add_column": {
+          "table": "contact_msgs",
+          "column": {
+            "pk": false,
+            "name": "email",
+            "type": "text",
+            "unique": false,
+            "comment": "",
+            "nullable": true
+          }
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_cs4k8moj5m8gpv4tl0u0",
+  "parent": "mig_cs4k890j5m8gpv4tl0s0",
+  "schema": "public",
+  "startedAt": "2024-10-11T15:29:31.436932Z"
+}

@@ -1,0 +1,24 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_cu955v1f9c09ofa11jag",
+    "operations": [
+      {
+        "add_column": {
+          "table": "services",
+          "column": {
+            "name": "serviceCount",
+            "type": "int",
+            "comment": "",
+            "nullable": true
+          }
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_cu955v1f9c09ofa11jag",
+  "parent": "mig_cu95551f9c09ofa11j80",
+  "schema": "public",
+  "startedAt": "2025-01-23T14:32:29.131717Z"
+}

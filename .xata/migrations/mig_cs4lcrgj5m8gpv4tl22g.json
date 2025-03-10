@@ -1,0 +1,26 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_cs4lcrgj5m8gpv4tl22g",
+    "operations": [
+      {
+        "add_column": {
+          "table": "users",
+          "column": {
+            "pk": false,
+            "name": "ProfilePic",
+            "type": "xata.xata_file",
+            "unique": false,
+            "comment": "{\"xata.file.dpa\":true}",
+            "nullable": true
+          }
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_cs4lcrgj5m8gpv4tl22g",
+  "parent": "mig_cs4lcnoj5m8gpv4tl21g",
+  "schema": "public",
+  "startedAt": "2024-10-11T16:46:39.243078Z"
+}

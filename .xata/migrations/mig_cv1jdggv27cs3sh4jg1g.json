@@ -1,0 +1,24 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_cv1jdggv27cs3sh4jg1g",
+    "operations": [
+      {
+        "add_column": {
+          "table": "panel-services2",
+          "column": {
+            "name": "serviceRate",
+            "type": "text",
+            "comment": "",
+            "nullable": true
+          }
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_cv1jdggv27cs3sh4jg1g",
+  "parent": "mig_cv1jdcedva2jtp9updl0",
+  "schema": "public",
+  "startedAt": "2025-03-01T16:33:06.511473Z"
+}

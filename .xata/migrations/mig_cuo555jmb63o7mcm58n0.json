@@ -1,0 +1,19 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_cuo555jmb63o7mcm58n0",
+    "operations": [
+      {
+        "rename_table": {
+          "to": "PanelsCRONJobStatus",
+          "from": "HomePageTranslatedText"
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_cuo555jmb63o7mcm58n0",
+  "parent": "mig_cuo4avcfbbqjrf2nr80g",
+  "schema": "public",
+  "startedAt": "2025-02-15T08:38:47.256254Z"
+}

@@ -1,0 +1,26 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_cs4l9coj5m8gpv4tl1cg",
+    "operations": [
+      {
+        "add_column": {
+          "table": "siteSettings",
+          "column": {
+            "pk": false,
+            "name": "SiteTitle",
+            "type": "text",
+            "unique": false,
+            "comment": "",
+            "nullable": true
+          }
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_cs4l9coj5m8gpv4tl1cg",
+  "parent": "mig_cs4kknoj5m8gpv4tl1ag",
+  "schema": "public",
+  "startedAt": "2024-10-11T16:39:15.908881Z"
+}

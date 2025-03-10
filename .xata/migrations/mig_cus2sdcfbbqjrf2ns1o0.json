@@ -1,0 +1,24 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_cus2sdcfbbqjrf2ns1o0",
+    "operations": [
+      {
+        "add_column": {
+          "table": "HOMEPageTranslations",
+          "column": {
+            "name": "ptTranslation",
+            "type": "text",
+            "comment": "",
+            "nullable": true
+          }
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_cus2sdcfbbqjrf2ns1o0",
+  "parent": "mig_cus2s8kfbbqjrf2ns1n0",
+  "schema": "public",
+  "startedAt": "2025-02-21T07:41:42.469861Z"
+}

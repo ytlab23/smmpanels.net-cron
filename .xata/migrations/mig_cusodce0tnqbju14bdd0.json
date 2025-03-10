@@ -1,0 +1,24 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_cusodce0tnqbju14bdd0",
+    "operations": [
+      {
+        "add_column": {
+          "table": "siteSettings",
+          "column": {
+            "name": "homeHeaderParaPt",
+            "type": "text",
+            "comment": "",
+            "nullable": true
+          }
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_cusodce0tnqbju14bdd0",
+  "parent": "mig_cusobom0tnqbju14bdc0",
+  "schema": "public",
+  "startedAt": "2025-02-22T08:11:30.2449Z"
+}

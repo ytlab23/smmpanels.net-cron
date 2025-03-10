@@ -1,0 +1,24 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_cuqppcrmb63o7mcm5qm0",
+    "operations": [
+      {
+        "add_column": {
+          "table": "panels-datatable",
+          "column": {
+            "name": "lastBackupDate",
+            "type": "timestamptz",
+            "comment": "",
+            "nullable": true
+          }
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_cuqppcrmb63o7mcm5qm0",
+  "parent": "mig_cuo555jmb63o7mcm58n0",
+  "schema": "public",
+  "startedAt": "2025-02-19T08:56:19.887415Z"
+}

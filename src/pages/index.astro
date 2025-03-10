@@ -1,0 +1,75 @@
+---
+import { getAPIPath } from './js/utils';
+
+interface ServiceBackup {
+    stats: {
+        panelTitle: string;
+        newServices: number;
+        deletedServices: number;
+    }[],
+    message : string,
+    complitionTime : string
+}
+let isBackupDone = false;
+
+let serviceBackup: ServiceBackup = { stats: [], message : "", complitionTime : "" };
+if (Astro.request.method === "POST") {
+    try {
+        serviceBackup = await fetch(getAPIPath() + "api/servicesBackup.json").then(Response => Response.json());
+        isBackupDone = true;
+
+    } catch (error) {
+        console.log("Error occured- ", error);
+    }
+}
+
+---
+
+<div class="messageContainer relative w-full h-screen flex justify-center items-center bg-[url('/assets/images/bg.webp')] bg-no-repeat bg-center bg-cover">
+    <div class="overlay absolute z-[1] size-full backdrop-blur-sm bg-[#00000078]"></div>
+    <div class="wrapper z-[2] w-full flex justify-center items-center">
+        <div class="container1280px w-[1280px] flex gap-5 flex-col justify-center items-center text-white">
+            <img src="https://eu-central-1.storage.xata.sh/133e0gdh1rek5avl2pf660msj8fig87g" class="size-14 m-2">
+            <h1 class="text-center font-bold text-xl">SMMPanels.net Save Panels' Services</h1>
+            <span class="hidden cursor-not-allowed brightness-75"></span>
+            <form method="post">
+                <button id="backupBtn" class="px-3 py-2 rounded-lg bg-gradient-to-br hover:bg-gradient-to-tl from-green-600 to-green-400 font-semibold active:scale-95 transition-all ease-in-out" type="submit">Click to Start Backup <i class="fa-solid fa-arrows-rotate"></i></button>
+            </form>
+            
+            {
+                isBackupDone &&
+                <div class="data-container-table flex gap-3 flex-col w-2/3 text-black font-semibold">
+                    <div class="data-col text-center w-full p-2 px-3 rounded-sm flex justify-between items-center bg-white">
+                        <span class="flex-1">Updated Panel</span>
+                        <span class="flex-1">New Services Added</span>
+                        <span class="flex-1">Deleted Services</span>
+                    </div>
+    
+                    {
+                        serviceBackup.stats.map((info: any) => (
+                            <div class="data-col text-center w-full p-2 px-3 rounded-sm flex justify-between items-center bg-white">
+                                <span class="flex-1">{info.panelTitle}</span>
+                                <span class="flex-1">{info.newServices}</span>
+                                <span class="flex-1">{info.deletedServices}</span>
+                            </div>
+                            <div class="data-col text-center w-full p-2 px-3 rounded-sm flex justify-between items-center bg-white">
+                                <span class="flex-1">Process Time : {serviceBackup.complitionTime}</span>
+                            </div>
+                        ))
+                    }
+                    
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<script is:inline>
+    let backupBtn = document.querySelector("#backupBtn");
+    backupBtn.addEventListener("click", ()=>{
+        backupBtn.textContent = "Started!! Please Wait..."
+        backupBtn.style.pointerEvents="none";
+        backupBtn.classList.add("cursor-not-allowed");
+        backupBtn.classList.add("brightness-75");
+    })
+</script>

@@ -1,0 +1,26 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_ct0sr3s8931gld88k3a0",
+    "operations": [
+      {
+        "add_column": {
+          "table": "siteSettings",
+          "column": {
+            "pk": false,
+            "name": "emailAutoReplyContent",
+            "type": "json",
+            "unique": false,
+            "comment": "",
+            "nullable": true
+          }
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_ct0sr3s8931gld88k3a0",
+  "parent": "mig_ct0sqvk8931gld88k38g",
+  "schema": "public",
+  "startedAt": "2024-11-23T12:41:51.513529Z"
+}

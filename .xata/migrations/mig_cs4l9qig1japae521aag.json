@@ -1,0 +1,26 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_cs4l9qig1japae521aag",
+    "operations": [
+      {
+        "add_column": {
+          "table": "siteSettings",
+          "column": {
+            "pk": false,
+            "name": "homeBackgroundImage",
+            "type": "xata.xata_file",
+            "unique": false,
+            "comment": "{\"xata.file.dpa\":true}",
+            "nullable": true
+          }
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_cs4l9qig1japae521aag",
+  "parent": "mig_cs4l9oqg1japae521a9g",
+  "schema": "public",
+  "startedAt": "2024-10-11T16:40:11.541712Z"
+}

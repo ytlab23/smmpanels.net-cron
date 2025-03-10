@@ -1,0 +1,26 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_cs4l9ioj5m8gpv4tl1eg",
+    "operations": [
+      {
+        "add_column": {
+          "table": "siteSettings",
+          "column": {
+            "pk": false,
+            "name": "siteFavicon",
+            "type": "xata.xata_file",
+            "unique": false,
+            "comment": "{\"xata.file.dpa\":true}",
+            "nullable": true
+          }
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_cs4l9ioj5m8gpv4tl1eg",
+  "parent": "mig_cs4l9f0j5m8gpv4tl1dg",
+  "schema": "public",
+  "startedAt": "2024-10-11T16:39:40.172415Z"
+}

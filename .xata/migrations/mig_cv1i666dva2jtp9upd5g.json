@@ -1,0 +1,22 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_cv1i666dva2jtp9upd5g",
+    "operations": [
+      {
+        "alter_column": {
+          "up": "(SELECT CASE WHEN \"lastBackupDate\" IS NULL THEN now() ELSE \"lastBackupDate\" END)",
+          "down": "(SELECT CASE WHEN \"lastBackupDate\" IS NULL THEN now() ELSE \"lastBackupDate\" END)",
+          "table": "panels-datatable",
+          "column": "lastBackupDate",
+          "nullable": false
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_cv1i666dva2jtp9upd5g",
+  "parent": "mig_cv1i5fgv27cs3sh4jfng",
+  "schema": "public",
+  "startedAt": "2025-03-01T15:09:13.116722Z"
+}

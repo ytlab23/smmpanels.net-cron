@@ -1,0 +1,6 @@
+{
+  "databaseURL": "https://SMMPanel2-s-workspace-133e0g.eu-central-1.xata.sh/db/smmpanel2",
+  "codegen": {
+    "output": "src/xata.ts"
+  }
+}

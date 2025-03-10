@@ -1,0 +1,114 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_cv1jji0v27cs3sh4jg90",
+    "operations": [
+      {
+        "add_column": {
+          "table": "panel-services5",
+          "column": {
+            "name": "panelName",
+            "type": "text",
+            "nullable": true
+          }
+        }
+      },
+      {
+        "add_column": {
+          "table": "panel-services5",
+          "column": {
+            "name": "panelRefUrl",
+            "type": "text",
+            "nullable": true
+          }
+        }
+      },
+      {
+        "add_column": {
+          "table": "panel-services5",
+          "column": {
+            "name": "panelSlug",
+            "type": "text",
+            "nullable": true
+          }
+        }
+      },
+      {
+        "add_column": {
+          "table": "panel-services5",
+          "column": {
+            "name": "serviceCategory",
+            "type": "text",
+            "nullable": true
+          }
+        }
+      },
+      {
+        "add_column": {
+          "table": "panel-services5",
+          "column": {
+            "name": "serviceMax",
+            "type": "text",
+            "nullable": true
+          }
+        }
+      },
+      {
+        "add_column": {
+          "table": "panel-services5",
+          "column": {
+            "name": "serviceMin",
+            "type": "text",
+            "nullable": true
+          }
+        }
+      },
+      {
+        "add_column": {
+          "table": "panel-services5",
+          "column": {
+            "name": "serviceName",
+            "type": "text",
+            "nullable": true
+          }
+        }
+      },
+      {
+        "add_column": {
+          "table": "panel-services5",
+          "column": {
+            "name": "serviceNo",
+            "type": "text",
+            "nullable": true
+          }
+        }
+      },
+      {
+        "add_column": {
+          "table": "panel-services5",
+          "column": {
+            "name": "serviceRate",
+            "type": "text",
+            "nullable": true
+          }
+        }
+      },
+      {
+        "add_column": {
+          "table": "panel-services5",
+          "column": {
+            "name": "serviceUploadDate",
+            "type": "timestamptz",
+            "default": "now()",
+            "nullable": true
+          }
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_cv1jji0v27cs3sh4jg90",
+  "parent": "mig_cv1jiumdva2jtp9updq0",
+  "schema": "public",
+  "startedAt": "2025-03-01T16:46:01.34847Z"
+}

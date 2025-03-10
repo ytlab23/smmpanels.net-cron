@@ -1,0 +1,26 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_cs4kkggj5m8gpv4tl19g",
+    "operations": [
+      {
+        "add_column": {
+          "table": "services",
+          "column": {
+            "pk": false,
+            "name": "serviceTitle",
+            "type": "text",
+            "unique": false,
+            "comment": "",
+            "nullable": true
+          }
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_cs4kkggj5m8gpv4tl19g",
+  "parent": "mig_cs4kkaig1japae5219ug",
+  "schema": "public",
+  "startedAt": "2024-10-11T15:54:43.192542Z"
+}

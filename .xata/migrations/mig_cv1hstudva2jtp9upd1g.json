@@ -1,0 +1,20 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_cv1hstudva2jtp9upd1g",
+    "operations": [
+      {
+        "drop_column": {
+          "down": "now()",
+          "table": "panel-services",
+          "column": "serviceUploadDate"
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_cv1hstudva2jtp9upd1g",
+  "parent": "mig_cuviaskfbbqjrf2nso9g",
+  "schema": "public",
+  "startedAt": "2025-03-01T14:49:27.717207Z"
+}

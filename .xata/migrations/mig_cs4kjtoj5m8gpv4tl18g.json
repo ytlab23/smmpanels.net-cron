@@ -1,0 +1,26 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_cs4kjtoj5m8gpv4tl18g",
+    "operations": [
+      {
+        "add_column": {
+          "table": "panel-services",
+          "column": {
+            "pk": false,
+            "name": "serviceMax",
+            "type": "text",
+            "unique": false,
+            "comment": "",
+            "nullable": true
+          }
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_cs4kjtoj5m8gpv4tl18g",
+  "parent": "mig_cs4kjr8j5m8gpv4tl17g",
+  "schema": "public",
+  "startedAt": "2024-10-11T15:53:28.201658Z"
+}

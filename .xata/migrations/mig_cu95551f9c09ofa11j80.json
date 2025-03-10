@@ -1,0 +1,24 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_cu95551f9c09ofa11j80",
+    "operations": [
+      {
+        "alter_column": {
+          "up": "\"panelSlug\"",
+          "down": "\"panelSlug\"",
+          "table": "panel-services",
+          "column": "panelSlug",
+          "unique": {
+            "name": "panel-services_panelSlug_unique"
+          }
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_cu95551f9c09ofa11j80",
+  "parent": "mig_ct0sr3s8931gld88k3a0",
+  "schema": "public",
+  "startedAt": "2025-01-23T14:30:44.559337Z"
+}

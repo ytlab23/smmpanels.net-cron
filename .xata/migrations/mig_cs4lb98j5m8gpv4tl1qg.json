@@ -1,0 +1,26 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_cs4lb98j5m8gpv4tl1qg",
+    "operations": [
+      {
+        "add_column": {
+          "table": "panels-datatable",
+          "column": {
+            "pk": false,
+            "name": "paneFeaturedImage",
+            "type": "xata.xata_file",
+            "unique": false,
+            "comment": "{\"xata.file.dpa\":true}",
+            "nullable": true
+          }
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_cs4lb98j5m8gpv4tl1qg",
+  "parent": "mig_cs4lb6gj5m8gpv4tl1pg",
+  "schema": "public",
+  "startedAt": "2024-10-11T16:43:17.796013Z"
+}

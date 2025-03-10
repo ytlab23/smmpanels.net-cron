@@ -1,0 +1,24 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_cuvi86cfbbqjrf2nso2g",
+    "operations": [
+      {
+        "add_column": {
+          "table": "panel-services1",
+          "column": {
+            "name": "panelSlug",
+            "type": "text",
+            "comment": "",
+            "nullable": true
+          }
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_cuvi86cfbbqjrf2nso2g",
+  "parent": "mig_cuvi7q60tnqbju14btr0",
+  "schema": "public",
+  "startedAt": "2025-02-26T14:24:26.672748Z"
+}

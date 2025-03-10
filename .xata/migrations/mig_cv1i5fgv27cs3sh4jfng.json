@@ -1,0 +1,25 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_cv1i5fgv27cs3sh4jfng",
+    "operations": [
+      {
+        "add_column": {
+          "table": "panel-services",
+          "column": {
+            "name": "serviceUploadDate",
+            "type": "timestamptz",
+            "comment": "",
+            "default": "now()",
+            "nullable": true
+          }
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_cv1i5fgv27cs3sh4jfng",
+  "parent": "mig_cv1hstudva2jtp9upd1g",
+  "schema": "public",
+  "startedAt": "2025-03-01T15:07:43.980744Z"
+}

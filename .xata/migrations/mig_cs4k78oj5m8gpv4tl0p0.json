@@ -1,0 +1,61 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_cs4k78oj5m8gpv4tl0p0",
+    "operations": [
+      {
+        "create_table": {
+          "name": "contact_msgs",
+          "columns": [
+            {
+              "name": "xata_id",
+              "type": "text",
+              "check": {
+                "name": "contact_msgs_xata_id_length_xata_id",
+                "constraint": "length(\"xata_id\") < 256"
+              },
+              "unique": true,
+              "default": "'rec_' || xata_private.xid()",
+              "nullable": false
+            },
+            {
+              "name": "xata_version",
+              "type": "integer",
+              "default": "0",
+              "nullable": false
+            },
+            {
+              "name": "xata_createdat",
+              "type": "timestamptz",
+              "default": "now()",
+              "nullable": false
+            },
+            {
+              "name": "xata_updatedat",
+              "type": "timestamptz",
+              "default": "now()",
+              "nullable": false
+            }
+          ]
+        }
+      },
+      {
+        "sql": {
+          "up": "ALTER TABLE \"contact_msgs\" REPLICA IDENTITY FULL",
+          "onComplete": true
+        }
+      },
+      {
+        "sql": {
+          "up": "CREATE TRIGGER xata_maintain_metadata_trigger_pgroll\n  BEFORE INSERT OR UPDATE\n  ON \"contact_msgs\"\n  FOR EACH ROW\n  EXECUTE FUNCTION xata_private.maintain_metadata_trigger_pgroll()",
+          "onComplete": true
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_cs4k78oj5m8gpv4tl0p0",
+  "parent": "mig_cs4k778j5m8gpv4tl0o0",
+  "schema": "public",
+  "startedAt": "2024-10-11T15:26:28.076736Z"
+}

@@ -1,0 +1,26 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_cs4la48j5m8gpv4tl1hg",
+    "operations": [
+      {
+        "add_column": {
+          "table": "siteSettings",
+          "column": {
+            "pk": false,
+            "name": "platformServiceCount",
+            "type": "int",
+            "unique": false,
+            "comment": "",
+            "nullable": true
+          }
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_cs4la48j5m8gpv4tl1hg",
+  "parent": "mig_cs4la22g1japae521abg",
+  "schema": "public",
+  "startedAt": "2024-10-11T16:40:49.995723Z"
+}

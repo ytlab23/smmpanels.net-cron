@@ -1,0 +1,19 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_csljemoq82g9r3hgf1vg",
+    "operations": [
+      {
+        "drop_column": {
+          "table": "payment-options",
+          "column": "logo"
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_csljemoq82g9r3hgf1vg",
+  "parent": "mig_csljeegq82g9r3hgf1ug",
+  "schema": "public",
+  "startedAt": "2024-11-06T09:31:07.927626Z"
+}

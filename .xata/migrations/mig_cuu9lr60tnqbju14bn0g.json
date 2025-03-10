@@ -1,0 +1,22 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_cuu9lr60tnqbju14bn0g",
+    "operations": [
+      {
+        "alter_column": {
+          "up": "(SELECT CASE WHEN \"serviceUploadDate\" IS NULL THEN now() ELSE \"serviceUploadDate\" END)",
+          "down": "(SELECT CASE WHEN \"serviceUploadDate\" IS NULL THEN now() ELSE \"serviceUploadDate\" END)",
+          "table": "panel-services",
+          "column": "serviceUploadDate",
+          "nullable": false
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_cuu9lr60tnqbju14bn0g",
+  "parent": "mig_cusodce0tnqbju14bdd0",
+  "schema": "public",
+  "startedAt": "2025-02-24T16:14:37.571928Z"
+}

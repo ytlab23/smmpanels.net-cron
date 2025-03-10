@@ -1,0 +1,19 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_cs5otjqg1japae521g60",
+    "operations": [
+      {
+        "drop_column": {
+          "table": "contact_msgs",
+          "column": "status"
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_cs5otjqg1japae521g60",
+  "parent": "mig_cs4ld9gj5m8gpv4tl23g",
+  "schema": "public",
+  "startedAt": "2024-10-13T09:11:43.63206Z"
+}

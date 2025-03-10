@@ -1,0 +1,26 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_cs4langj5m8gpv4tl1mg",
+    "operations": [
+      {
+        "add_column": {
+          "table": "pages",
+          "column": {
+            "pk": false,
+            "name": "pageSlug",
+            "type": "text",
+            "unique": true,
+            "comment": "",
+            "nullable": true
+          }
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_cs4langj5m8gpv4tl1mg",
+  "parent": "mig_cs4lajoj5m8gpv4tl1lg",
+  "schema": "public",
+  "startedAt": "2024-10-11T16:42:06.913139Z"
+}

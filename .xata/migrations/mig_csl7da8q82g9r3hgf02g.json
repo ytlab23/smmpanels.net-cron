@@ -1,0 +1,23 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_csl7da8q82g9r3hgf02g",
+    "operations": [
+      {
+        "add_column": {
+          "table": "payment-options",
+          "column": {
+            "name": "paymentLogo",
+            "type": "xata_file",
+            "nullable": true
+          }
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_csl7da8q82g9r3hgf02g",
+  "parent": "mig_csl77g7u2521o9r1jr30",
+  "schema": "public",
+  "startedAt": "2024-11-05T19:48:57.863466Z"
+}

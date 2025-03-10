@@ -1,0 +1,26 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_cssdhe11hp5m238s6on0",
+    "operations": [
+      {
+        "add_column": {
+          "table": "siteSettings",
+          "column": {
+            "pk": false,
+            "name": "emailAutoReplyContent",
+            "type": "text",
+            "unique": false,
+            "comment": "",
+            "nullable": true
+          }
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_cssdhe11hp5m238s6on0",
+  "parent": "mig_csljemoq82g9r3hgf1vg",
+  "schema": "public",
+  "startedAt": "2024-11-16T17:39:05.657661Z"
+}

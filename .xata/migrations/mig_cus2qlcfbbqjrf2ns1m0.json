@@ -1,0 +1,24 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_cus2qlcfbbqjrf2ns1m0",
+    "operations": [
+      {
+        "alter_column": {
+          "up": "\"panelSlug\"",
+          "down": "\"panelSlug\"",
+          "table": "HOMEPageTranslations",
+          "column": "panelSlug",
+          "unique": {
+            "name": "HOMEPageTranslations_panelSlug_unique"
+          }
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_cus2qlcfbbqjrf2ns1m0",
+  "parent": "mig_cus2qecfbbqjrf2ns1l0",
+  "schema": "public",
+  "startedAt": "2025-02-21T07:37:58.508369Z"
+}

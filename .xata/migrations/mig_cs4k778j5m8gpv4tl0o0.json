@@ -1,0 +1,61 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_cs4k778j5m8gpv4tl0o0",
+    "operations": [
+      {
+        "create_table": {
+          "name": "panels-datatable",
+          "columns": [
+            {
+              "name": "xata_version",
+              "type": "integer",
+              "default": "0",
+              "nullable": false
+            },
+            {
+              "name": "xata_createdat",
+              "type": "timestamptz",
+              "default": "now()",
+              "nullable": false
+            },
+            {
+              "name": "xata_updatedat",
+              "type": "timestamptz",
+              "default": "now()",
+              "nullable": false
+            },
+            {
+              "name": "xata_id",
+              "type": "text",
+              "check": {
+                "name": "panels-datatable_xata_id_length_xata_id",
+                "constraint": "length(\"xata_id\") < 256"
+              },
+              "unique": true,
+              "default": "'rec_' || xata_private.xid()",
+              "nullable": false
+            }
+          ]
+        }
+      },
+      {
+        "sql": {
+          "up": "ALTER TABLE \"panels-datatable\" REPLICA IDENTITY FULL",
+          "onComplete": true
+        }
+      },
+      {
+        "sql": {
+          "up": "CREATE TRIGGER xata_maintain_metadata_trigger_pgroll\n  BEFORE INSERT OR UPDATE\n  ON \"panels-datatable\"\n  FOR EACH ROW\n  EXECUTE FUNCTION xata_private.maintain_metadata_trigger_pgroll()",
+          "onComplete": true
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_cs4k778j5m8gpv4tl0o0",
+  "parent": "mig_cs4j480j5m8gpv4tl07g",
+  "schema": "public",
+  "startedAt": "2024-10-11T15:26:22.022244Z"
+}

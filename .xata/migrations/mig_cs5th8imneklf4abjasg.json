@@ -1,0 +1,21 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_cs5th8imneklf4abjasg",
+    "operations": [
+      {
+        "drop_constraint": {
+          "up": "\"panelSlug\"",
+          "down": "\"panelSlug\"",
+          "name": "panel-services__pgroll_new_panelSlug_key",
+          "table": "panel-services"
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_cs5th8imneklf4abjasg",
+  "parent": "mig_cs5p2u8j5m8gpv4tl7hg",
+  "schema": "public",
+  "startedAt": "2024-10-13T14:26:43.360381Z"
+}

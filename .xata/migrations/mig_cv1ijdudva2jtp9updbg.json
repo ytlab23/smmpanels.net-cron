@@ -1,0 +1,22 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_cv1ijdudva2jtp9updbg",
+    "operations": [
+      {
+        "alter_column": {
+          "up": "\"lastBackupDate\"",
+          "down": "\"lastBackupDate\"",
+          "table": "panels-datatable",
+          "column": "lastBackupDate",
+          "nullable": true
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_cv1ijdudva2jtp9updbg",
+  "parent": "mig_cv1i666dva2jtp9upd5g",
+  "schema": "public",
+  "startedAt": "2025-03-01T15:37:28.258199Z"
+}

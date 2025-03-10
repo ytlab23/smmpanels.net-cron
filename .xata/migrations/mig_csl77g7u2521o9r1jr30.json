@@ -1,0 +1,26 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_csl77g7u2521o9r1jr30",
+    "operations": [
+      {
+        "add_column": {
+          "table": "payment-options",
+          "column": {
+            "pk": false,
+            "name": "paymentOptTitle",
+            "type": "text",
+            "unique": false,
+            "comment": "",
+            "nullable": true
+          }
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_csl77g7u2521o9r1jr30",
+  "parent": "mig_csl774k79lrh3b4p007g",
+  "schema": "public",
+  "startedAt": "2024-11-05T19:36:32.868301Z"
+}
