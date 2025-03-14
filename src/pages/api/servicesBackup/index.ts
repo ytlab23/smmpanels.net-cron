@@ -272,7 +272,7 @@ export const GET: APIRoute = async () => {
         interval = setInterval(() => {
             sec++;
         }, 1000);
-        let panelsForBackUp = await fetch(getAPIPath() + "api/servicesBackup.json", {method: "PUT"}).then((Response) =>
+        let panelsForBackUp = await fetch(getAPIPath() + "api/servicesBackup", {method: "PUT"}).then((Response) =>
             Response.json(),
         );
         let APIUrl = "";
@@ -289,7 +289,7 @@ export const GET: APIRoute = async () => {
             
             APIUrl = `${panelsForBackUp.panelsForBackUp[i].panelAPILink}?key=${panelsForBackUp.panelsForBackUp[i].panelAPIKey}&action=services`
 
-            let processPanelServiceBackup = await fetch(getAPIPath() + "api/servicesBackup.json", {
+            let processPanelServiceBackup = await fetch(getAPIPath() + "api/servicesBackup", {
                     method:"POST",
                     body : panelFormData
                 }
