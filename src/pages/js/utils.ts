@@ -52,7 +52,7 @@ export function timeDifference(dateTime: string | Date): string {
 }
 
 export function getAPIPath() {
-    let siteIs = "https://smmpanels-admin.vercel.app/";
+    let siteIs = "https://smmpanelsnet.vercel.app/";
     // let siteIs = "http://localhost:4321/";
     return siteIs
 }

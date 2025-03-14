@@ -1,7 +1,7 @@
 {
     "crons": [
       {
-        "path": "/api/servicesBackup.json",
+        "path": "/api/servicesBackup",
         "schedule": "*/15 * * * 0"
       }
     ]

@@ -6,14 +6,11 @@ import vercel from "@astrojs/vercel";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind()],
-  // site: 'http://localhost:4321',
-  // site: 'https://smm-admin.vercel.app/',
-  // site: 'https://smm-reviews-panel-v2.vercel.app/',
-  // site: 'https://smm-admin2.vercel.app/',
-  // site: 'https://smm-admin-smmpanels.vercel.app/',
-  site: 'https://smmpanels-admin.vercel.app/',
+  site: 'https://smmpanelsnet.vercel.app/',
   output: "server",
-  adapter: vercel(),
+  adapter: vercel({
+    maxDuration: 60
+  }),
   security: {
     checkOrigin: false
   },
