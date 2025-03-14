@@ -24,7 +24,15 @@ if (Astro.request.method === "POST") {
 }
 
 ---
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMMPanels.net - Take a backup</title>
+</head>
+<body>
+    
 <div class="messageContainer relative w-full h-screen flex justify-center items-center bg-[url('/assets/images/bg.webp')] bg-no-repeat bg-center bg-cover">
     <div class="overlay absolute z-[1] size-full backdrop-blur-sm bg-[#00000078]"></div>
     <div class="wrapper z-[2] w-full flex justify-center items-center">
@@ -73,3 +81,5 @@ if (Astro.request.method === "POST") {
         backupBtn.classList.add("brightness-75");
     })
 </script>
+</body>
+</html>
