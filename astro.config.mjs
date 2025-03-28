@@ -9,7 +9,7 @@ export default defineConfig({
   site: 'https://smmpanelsnet.vercel.app/',
   output: "server",
   adapter: vercel({
-    maxDuration: 60
+    maxDuration: 240
   }),
   security: {
     checkOrigin: false
