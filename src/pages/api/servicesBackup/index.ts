@@ -25,26 +25,36 @@ export const PUT: APIRoute = async () => {
         //Finding atleast 10 panels that requires Backup
         let currentDate = new Date();
         for (let i = 0; i < records.length; i++) {
-            
-            if(records[i].lastBackupDate != null || records[i].lastBackupDate != undefined){
-                
-                const timeDifference = Math.abs(currentDate.getTime() - records[i].lastBackupDate.getTime() ); // in milliseconds
-                const dayDifference = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
-
-                if(dayDifference >= 7){
-                    panelsForBackUp.push(records[i]);
-                    counter++;
-                }
-                
-            }
-            
             if(records[i].lastBackupDate == null){
-                
                 panelsForBackUp.push(records[i])
                 counter++;
+                break;
             }
+        }
 
-            if(counter == 1) break;
+        if(counter == 1){
+            for (let i = 0; i < records.length; i++) {
+                
+                if(records[i].lastBackupDate != null || records[i].lastBackupDate != undefined){
+                    
+                    const timeDifference = Math.abs(currentDate.getTime() - records[i].lastBackupDate.getTime() ); // in milliseconds
+                    const dayDifference = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
+    
+                    if(dayDifference >= 7){
+                        panelsForBackUp.push(records[i]);
+                        counter++;
+                    }
+                    
+                }
+                
+                if(records[i].lastBackupDate == null){
+                    
+                    panelsForBackUp.push(records[i])
+                    counter++;
+                }
+    
+                if(counter == 1) break;
+            }
         }
         
         return new Response(
