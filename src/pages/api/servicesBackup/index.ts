@@ -32,7 +32,7 @@ export const PUT: APIRoute = async () => {
             }
         }
 
-        if(counter == 1){
+        if(counter == 0){
             for (let i = 0; i < records.length; i++) {
                 
                 if(records[i].lastBackupDate != null || records[i].lastBackupDate != undefined){

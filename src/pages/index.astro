@@ -15,7 +15,7 @@ let isBackupDone = false;
 let serviceBackup: ServiceBackup = { stats: [], message : "", complitionTime : "" };
 if (Astro.request.method === "POST") {
     try {
-        serviceBackup = await fetch(getAPIPath() + "api/servicesBackup.json").then(Response => Response.json());
+        serviceBackup = await fetch(getAPIPath() + "api/servicesBackup").then(Response => Response.json());
         isBackupDone = true;
 
     } catch (error) {
