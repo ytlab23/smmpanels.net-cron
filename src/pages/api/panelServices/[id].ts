@@ -104,12 +104,12 @@ export const GET: APIRoute = async ({ params }) => {
         ])
         .getAll();
     
-        let panelServices = records.filter(obj => obj.serviceName?.includes(id?.replace("search_", "").toString()));
-        let panelServices1 = records1.filter(obj => obj.serviceName?.includes(id?.replace("search_", "").toString()));
-        let panelServices2 = records2.filter(obj => obj.serviceName?.includes(id?.replace("search_", "").toString()));
-        let panelServices3 = records3.filter(obj => obj.serviceName?.includes(id?.replace("search_", "").toString()));
-        let panelServices4 = records4.filter(obj => obj.serviceName?.includes(id?.replace("search_", "").toString()));
-        let panelServices5 = records5.filter(obj => obj.serviceName?.includes(id?.replace("search_", "").toString()));
+        let panelServices = records.filter(obj => obj.serviceName?.toLocaleLowerCase()?.includes(id?.replace("search_", "").toString().toLocaleLowerCase()));
+        let panelServices1 = records1.filter(obj => obj.serviceName?.toLocaleLowerCase()?.includes(id?.replace("search_", "").toString().toLocaleLowerCase()));
+        let panelServices2 = records2.filter(obj => obj.serviceName?.toLocaleLowerCase()?.includes(id?.replace("search_", "").toString().toLocaleLowerCase()));
+        let panelServices3 = records3.filter(obj => obj.serviceName?.toLocaleLowerCase()?.includes(id?.replace("search_", "").toString().toLocaleLowerCase()));
+        let panelServices4 = records4.filter(obj => obj.serviceName?.toLocaleLowerCase()?.includes(id?.replace("search_", "").toString().toLocaleLowerCase()));
+        let panelServices5 = records5.filter(obj => obj.serviceName?.toLocaleLowerCase()?.includes(id?.replace("search_", "").toString().toLocaleLowerCase()));
         
         const combinedArray = panelServices.concat(panelServices1.concat(panelServices2.concat(panelServices3.concat(panelServices4.concat(panelServices5)))));
     
