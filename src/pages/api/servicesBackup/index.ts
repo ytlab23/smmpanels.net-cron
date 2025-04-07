@@ -74,6 +74,27 @@ export const PUT: APIRoute = async () => {
     }
 }
 
+function cleanObject(inputObject :any) {
+    // Extract only the needed attributes
+    const { panelName, panelSlug, panelRefUrl, serviceUploadDate, serviceNo, serviceName, serviceRate, serviceMin, serviceMax, serviceCategory } = inputObject;
+  
+    // Create a new object with required attributes
+    const cleanedObject = {
+        panelName,
+        panelSlug,
+        panelRefUrl,
+        serviceUploadDate,
+        serviceNo,
+        serviceName,
+        serviceRate,
+        serviceMin,
+        serviceMax,
+        serviceCategory
+    };
+  
+    return cleanedObject;
+}
+
 export const POST: APIRoute = async ({request}) => {
     const data = await request.formData();
     
@@ -136,21 +157,8 @@ export const POST: APIRoute = async ({request}) => {
             panelServicesData_FRESH[j].serviceMin = panelServicesData_FRESH[j].min.toString();
             panelServicesData_FRESH[j].serviceMax = panelServicesData_FRESH[j].max.toString();
             panelServicesData_FRESH[j].serviceCategory = panelServicesData_FRESH[j].category.toString();
-        
-            delete panelServicesData_FRESH[j].type;
-            delete panelServicesData_FRESH[j].dripfeed;
-            delete panelServicesData_FRESH[j].refill;
-            delete panelServicesData_FRESH[j].cancel;
-            
-            delete panelServicesData_FRESH[j].desc;
-            delete panelServicesData_FRESH[j].average_time;
-            delete panelServicesData_FRESH[j].description;
-            delete panelServicesData_FRESH[j].service;
-            delete panelServicesData_FRESH[j].name;
-            delete panelServicesData_FRESH[j].rate;
-            delete panelServicesData_FRESH[j].min;
-            delete panelServicesData_FRESH[j].max;
-            delete panelServicesData_FRESH[j].category;
+
+            panelServicesData_FRESH[j] = cleanObject(panelServicesData_FRESH[j]);
         }
     
         let APIURL_services= getAPIPath() + "api/panelServices/"+ data.get("panelSlug")?.toString();
@@ -165,7 +173,6 @@ export const POST: APIRoute = async ({request}) => {
         
         // console.log("filteredServices.newlyAdded- ",filteredServices.newlyAdded.length);
         // console.log("filteredServices.toBeDeleted- ",filteredServices.toBeDeleted.length);
-    
         
         //#region Deleting removed Services 
         for (let i = 0; i < filteredServices.toBeDeleted.length; i++) {
