@@ -2,7 +2,7 @@
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
     "module": "es2022",
-    "lib": ["ES2015"],
+    "lib": ["ES2015", "es2016"],
     "moduleResolution": "Node"
   },
 }

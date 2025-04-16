@@ -5,7 +5,17 @@ import { XataClient } from '../../../xata';
 const xata = new XataClient({ apiKey: import.meta.env.XATA_API_KEY, branch: import.meta.env.XATA_BRANCH });
 
 //#region Fetching Services For a Particular Panel
-export const GET: APIRoute = async ({ params }) => {
+export const GET: APIRoute = async ({ params, request }) => {
+    // originalData2
+    const allowedOrigins = ['http://localhost:4321', 'https://smmpanels.net'];
+    const origin = request.headers.get('origin');
+    const headers = new Headers();
+ 
+    if (allowedOrigins.includes(origin || "")) {
+        headers.set('Access-Control-Allow-Origin', origin || "");
+        headers.set('Access-Control-Allow-Headers', 'Content-Type');
+    }
+
     const id = params.id;
     if(id?.toString().includes("search_")){
         const records = await xata.db["panel-services"]
@@ -117,8 +127,10 @@ export const GET: APIRoute = async ({ params }) => {
             JSON.stringify({
                 searchTerm : id?.replace("search_", "").toString(),
                 servicesFoundCount : combinedArray.length,
-                combinedArray
-            })
+                combinedArray,
+            } ), {
+                headers
+            }
         )
     }
     else{
@@ -231,7 +243,9 @@ export const GET: APIRoute = async ({ params }) => {
             JSON.stringify({
                 panelSlug : id?.toString(),
                 combinedArray
-            })
+            }), {
+                headers
+            }
         )
     }
 }
